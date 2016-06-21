@@ -1,0 +1,36 @@
+<?page title="Gastos" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="windGastos" title="Gastos" border="normal" height="600px" apply="controlador.gastos">
+<borderlayout height="600px" apply="">		
+		<center  border="none"  >
+			<div align="left">
+					<hbox>											
+						<vbox>
+							<button id="btnNuevo" label="Nuevo"></button>		
+						</vbox>
+					</hbox>
+					<space></space>
+				
+					<groupbox mold="3d" closable="false"  >			
+					<div align="center">
+						<listbox id="listaGastos" multiple="false" width="100%"
+							mold="paging" pagingPosition="bottom" pageSize="10" >
+							<listhead sizable="true">
+								<listheader align="center" label="Fecha" width="10%" sort="auto"/>
+								<listheader align="center" label="Banco" width="10%" sort="auto" />
+								<listheader align="center" label="Descripción" width="20%"	sort="auto" />
+								<listheader align="center" label="Monto" width="10%" sort="auto" />
+							</listhead>
+						</listbox>
+					</div>
+		
+				</groupbox>
+			
+		
+			</div>
+		
+		</center>
+		<east id="east" border="none"></east>
+	</borderlayout>
+</window>
+</zk>

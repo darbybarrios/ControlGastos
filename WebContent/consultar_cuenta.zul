@@ -1,0 +1,48 @@
+<?page title="Cuenta" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="windConsultarCuenta" title="Cuenta" border="normal" width="1000px" apply="controlador.consultar_cuenta">
+<div>
+	<grid>
+			<columns>
+				<column width="200px"></column>
+				<column width="100%"></column>
+			</columns>
+			<rows>
+				<row>
+					<label value="Numero de Cuenta"></label>
+					<textbox id="txtNumeroCuenta" readonly="true"></textbox>
+				</row>
+				<row>
+					<label value="Banco"></label>
+					<textbox id="txtBanco" readonly="true"></textbox>
+				</row>
+				<row>
+					<label value="Moneda"></label>
+					<combobox id="cmbMonedas" readonly="true"></combobox>
+				</row>			
+			</rows>
+		</grid>
+	
+</div>
+<space></space>
+
+<div>
+	<groupbox mold="3d" closable="false"  >			
+					<div align="center">
+						<listbox id="listaMontos" multiple="false" width="100%"
+							mold="paging" pagingPosition="bottom" pageSize="10" >
+							<listhead sizable="true">
+								<listheader align="center" label="Fecha" width="10%" sort="auto"/>
+								<listheader align="center" label="Descripción" width="30%" sort="auto" />
+								<listheader align="center" label="Ingresos" width="10%" sort="auto" />
+								<listheader align="center" label="Egresos" width="10%" sort="auto" />
+								<listheader align="center" label="Monto" width="10%" sort="auto" />
+							</listhead>
+						</listbox>
+					</div>
+		
+	</groupbox>
+</div>
+
+</window>
+</zk>

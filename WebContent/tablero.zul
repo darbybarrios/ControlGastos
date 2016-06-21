@@ -1,0 +1,64 @@
+<?page title="Tablero" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="windTablero" title="Tablero" border="normal" height="500px" apply="controlador.tablero">
+	<borderlayout>
+		<east border="none" width="50%">
+		<div >			
+				<div align="center" height="120px">
+					<label value="Bolivares" style="font-size:25pt"></label>
+				</div>
+				<div align="left">
+					<label value="Saldo:"></label>
+					<space width="100px"></space>
+					<label id="saldoBolivares" style="font-size:35pt"></label>
+				</div>
+				<div align="left">
+					<label value="Efectivo:"></label>
+					<space width="84px"></space>
+					<label id="efectivoBolivares" style="font-size:35pt"></label>
+				</div>
+				<div align="left">
+					<label value="Total:"></label>
+					<space width="100px"></space>
+					<label id="totalBolivares" style="font-size:35pt"></label>
+				</div>
+				
+			
+			
+			
+			</div>
+		</east>
+		<west border="none" width="50%">
+			<div >			
+				<div align="center" height="120px">
+					<label value="Dolares" style="font-size:25pt"></label>
+				</div>
+				<div align="left">
+					<label value="Saldo:"></label>
+					<space width="100px"></space>
+					<label id="saldoDolares" style="font-size:35pt"></label>
+				</div>
+				<div align="left">
+					<label value="Efectivo:"></label>
+					<space width="84px"></space>					
+					<label id="efectivoDolares" style="font-size:35pt"></label>
+				</div>
+				<div align="left">
+					<label value="Total:"></label>
+					<space width="100px"></space>					
+					<label id="totalDolares" style="font-size:35pt"></label>
+				</div>
+				
+			
+			
+			
+			</div>
+			
+			
+		
+		</west>
+	
+	
+	</borderlayout>
+</window>
+</zk>

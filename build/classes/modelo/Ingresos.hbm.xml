@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/06/2016 08:10:18 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="modelo.Ingresos" schema="public" table="ingresos">
+  <id name="id" type="int">
+   <column name="id"/>
+   <generator class="identity"/>
+  </id>
+  <many-to-one class="modelo.Cuentas" fetch="select" name="cuentas">
+   <column name="cuenta"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="descripcion" type="string">
+   <column name="descripcion"/>
+  </property>
+  <property generated="never" lazy="false" name="monto" type="java.lang.Double">
+   <column name="monto" precision="17" scale="17"/>
+  </property>
+  <property generated="never" lazy="false" name="estatus" type="string">
+   <column name="estatus"/>
+  </property>
+  <property generated="never" lazy="false" name="fecha" type="date">
+   <column length="13" name="fecha"/>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="detalleCuentases"
+   sort="unsorted" table="detalle_cuentas">
+   <key>
+    <column name="ingreso"/>
+   </key>
+   <one-to-many class="modelo.DetalleCuentas"/>
+  </set>
+ </class>
+</hibernate-mapping>

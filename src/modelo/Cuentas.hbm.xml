@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/06/2016 12:39:05 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="modelo.Cuentas" schema="public" table="cuentas">
+  <id name="id" type="int">
+   <column name="id"/>
+   <generator class="identity"/>
+  </id>
+  <many-to-one class="modelo.Moneda" fetch="select" name="moneda">
+   <column name="moneda"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="numeroCuenta" type="string">
+   <column name="numero_cuenta"/>
+  </property>
+  <property generated="never" lazy="false" name="banco" type="string">
+   <column name="banco"/>
+  </property>
+  <property generated="never" lazy="false" name="montoInicial" type="java.lang.Double">
+   <column name="monto_inicial" precision="17" scale="17"/>
+  </property>
+  <property generated="never" lazy="false" name="montoActual" type="java.lang.Double">
+   <column name="monto_actual" precision="17" scale="17"/>
+  </property>
+  <property generated="never" lazy="false" name="estatus" type="string">
+   <column name="estatus"/>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="ingresoses"
+   sort="unsorted" table="ingresos">
+   <key>
+    <column name="cuenta"/>
+   </key>
+   <one-to-many class="modelo.Ingresos"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="gastoses"
+   sort="unsorted" table="gastos">
+   <key>
+    <column name="cuenta"/>
+   </key>
+   <one-to-many class="modelo.Gastos"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="detalleCuentases"
+   sort="unsorted" table="detalle_cuentas">
+   <key>
+    <column name="cuenta"/>
+   </key>
+   <one-to-many class="modelo.DetalleCuentas"/>
+  </set>
+ </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?page title="Cuentas" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="windCuentas" title="Cuentas" border="normal" apply="controlador.cuentas" height="600px">
+<borderlayout height="600px" apply="">		
+		<center  border="none"  >
+			<div align="left">
+					
+					<hbox>											
+						<vbox>
+							<button id="btnNuevo" label="Nuevo"></button>		
+						</vbox>
+					</hbox>
+					<space></space>
+				
+				<groupbox mold="3d" closable="false"  >			
+					<div align="center">
+						<listbox id="listaCuentas" multiple="false" width="100%"
+							mold="paging" pagingPosition="bottom" pageSize="10" >
+							<listhead sizable="true">
+								<listheader width="10%" sort="auto" visible="false"/>								
+								<listheader align="center" label="Numero de Cuenta" width="10%" sort="auto" />
+								<listheader align="center" label="Banco" width="20%"	sort="auto" />
+								<listheader align="center" label="Monto" width="10%" sort="auto" />
+							</listhead>
+						</listbox>
+					</div>		
+				</groupbox>
+			
+		
+			</div>
+		
+		</center>
+		<east id="east" border="none"></east>
+	</borderlayout>
+</window>
+</zk>

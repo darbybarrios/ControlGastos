@@ -1,0 +1,31 @@
+<?page title="Registrar Ingreso" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="windRegistrarIngresos" title="Registrar Ingreso" border="normal" width="600px" apply="controlador.registrar_ingreso">
+	<div>
+		<grid>
+			<columns>
+				<column width="200px"></column>
+				<column width="100%"></column>
+			</columns>
+			<rows>
+				<row>
+					<label value="Cuenta"></label>
+					<combobox id="cmbCuentas"></combobox>				
+				</row>				
+				<row>
+					<label value="Monto"></label>
+					<doublebox id="txtMonto"></doublebox>
+				</row>
+				<row>
+					<label value="Descripción"></label>
+					<textbox id="txtDescripcion" width="100%" rows="3" maxlength="160"></textbox>
+				</row>		
+			</rows>			
+		</grid>
+	</div>
+	<space></space>
+	<div align="center">
+		<button id="btnGuardar" label="Guardar"></button>	
+	</div>
+</window>
+</zk>

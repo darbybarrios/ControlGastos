@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <mapping resource="modelo/DetalleCuentas.hbm.xml" />
+        <mapping resource="modelo/Usuarios.hbm.xml" />
+        <mapping resource="modelo/Cuentas.hbm.xml" />
+        <mapping resource="modelo/Gastos.hbm.xml" />
+        <mapping resource="modelo/Ingresos.hbm.xml" />
+        <mapping resource="modelo/Moneda.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

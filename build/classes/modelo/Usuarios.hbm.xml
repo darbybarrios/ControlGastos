@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/06/2016 12:39:05 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="modelo.Usuarios" schema="public" table="usuarios">
+  <id name="id" type="int">
+   <column name="id"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="nombre" type="string">
+   <column name="nombre"/>
+  </property>
+  <property generated="never" lazy="false" name="apellido" type="string">
+   <column name="apellido"/>
+  </property>
+  <property generated="never" lazy="false" name="usuario" type="string">
+   <column name="usuario"/>
+  </property>
+  <property generated="never" lazy="false" name="clave" type="string">
+   <column name="clave"/>
+  </property>
+  <property generated="never" lazy="false" name="estatus" type="string">
+   <column name="estatus"/>
+  </property>
+ </class>
+</hibernate-mapping>

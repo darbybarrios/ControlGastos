@@ -1,0 +1,35 @@
+<?page title="Registrar Cuenta" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Registrar Cuenta" border="normal" width="600px" id="windRegistrarCuenta" apply="controlador.registrar_cuenta">
+	<div>
+		<grid>
+			<columns>
+				<column width="200px"></column>
+				<column width="365px"></column>
+			</columns>
+			<rows>
+				<row>
+					<label value="Numero de Cuenta"></label>
+					<textbox id="txtNumeroCuenta"></textbox>
+				</row>
+				<row>
+					<label value="Banco" ></label>
+					<textbox id="txtBanco" ></textbox>
+				</row>
+				<row>
+					<label value="Monto Inicial"></label>
+					<doublebox id="txtMontoInicial" format="###,###,###,###,##0.00"></doublebox>				
+				</row>				
+				<row>
+					<label value="Moneda"></label>
+					<combobox id="cmbMonedas"> </combobox>
+				</row>			
+			</rows>
+		</grid>
+	</div>
+	<space></space>
+	<div align="center">
+		<button id="btnGuardar" label="Guardar"></button>
+	</div>
+</window>
+</zk>

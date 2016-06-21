@@ -1,0 +1,44 @@
+<?page title="Principal" contentType="text/html;charset=UTF-8"?>
+<zk>
+<div align="center">
+<window border="normal" id="windPrincipal" width="100%" height="650px" apply="controlador.principal">
+<borderlayout>
+				
+				<center border="none" autoscroll="true">
+					<div align="center">
+						<space />
+						<include id="pagina" src="tablero.zul" />
+					</div>
+				</center>
+				<west width="198px"  collapsible="false" margins="0,0,0,0" border="none">
+					<div align="left">
+
+						<tabbox id="principal" onCreate="" mold="accordion">
+							<tabs id="opciones">
+								<tab id="tabMenu" label="Menú"></tab>								
+							</tabs>
+							<tabpanels>
+								<tabpanel >
+									<panel width="100%">
+										<panelchildren style="padding:5px;">
+											<vbox>												
+												<toolbarbutton id="menuTablero" label="Tablero" />
+												<toolbarbutton id="menuCuentas" label="Cuentas" />
+												<toolbarbutton id="menuIngreso" label="Ingreso" />
+												<toolbarbutton id="menuGastos" label="Gastos" />
+											</vbox>
+										</panelchildren>
+									</panel>
+
+								</tabpanel>							
+
+							</tabpanels>
+						</tabbox>
+					</div>
+				</west>
+				<south border="none">
+				</south>
+</borderlayout>
+</window>
+</div>
+</zk>
